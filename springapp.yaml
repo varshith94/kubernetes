@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: springapp
+  tempalte:
+    metadata:
+      name: springapppod
+      labels: 
+        app: springapp
+    spec:
+      containers:
+         
